@@ -1,0 +1,578 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #000000;
+  font-size: 2rem;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+p {
+  color: #000000;
+  line-height: 1.5;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0 0 5rem 0;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4.6rem;
+}
+
+h3 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body > section {
+  padding: 10rem 0;
+}
+
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.header {
+  background-color: #4CB8B3;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .header.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
+.header .contenido-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header h1 {
+  margin: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    text-align: left;
+  }
+}
+.header .navegacion-principal {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header .navegacion-principal {
+    flex-direction: row;
+  }
+}
+.header .navegacion-principal a {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+}
+.header .navegacion-principal a:hover, .header .navegacion-principal a.active {
+  color: #fdda00; /* Color al pasar el mouse */
+}
+
+.video {
+  position: relative;
+  min-height: 50rem;
+  max-height: 70rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  background-color: rgba(56.7272727273, 22.7878787879, 73.2121212121, 0.9);
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+.video video {
+  display: block;
+  width: auto;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 10;
+}
+.contenido-video h2 {
+  font-size: 7rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+.contenido-video p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.sobre-festival {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.contenido-festival h2 {
+  margin: 0;
+}
+.contenido-festival .titulo-festival {
+  font-weight: 700;
+  color: #4CB8B3;
+}
+
+.lineup {
+  background-color: #F53756;
+}
+.lineup li {
+  padding: 2rem;
+}
+
+.escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+.escenarios-contenedor p {
+  text-align: center;
+}
+
+.dia {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.nombre-escenario {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bg-amarillo {
+  background-color: #fdda00;
+}
+.bg-amarillo li:nth-child(odd) {
+  background-color: rgb(255, 221.2243083004, 10.85);
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: rgb(84.95, 187.55, 182.8);
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding-top: 2.5rem;
+  font-weight: 700;
+}
+.calendario span {
+  font-weight: 400;
+}
+
+.contenedor-boletos {
+  background-color: #4CB8B3;
+}
+
+.boletos {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+.boletos ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000000;
+  font-size: 2.4rem;
+}
+.boletos li {
+  padding: 2rem;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.boletos ul, .boletos li {
+  background-color: #FFFFFF;
+}
+
+.pase {
+  transition: transform 0.3s ease-in-out;
+}
+.pase:hover {
+  transform: scale(1.05);
+}
+
+.pase-nombre {
+  color: #FFFFFF;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+.pase-header {
+  background-color: #F53756;
+  text-align: center;
+  padding: 0.1rem;
+}
+.pase-header p {
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+
+.pase-footer {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 2rem;
+}
+.pase-footer p {
+  transition: transform 0.3s ease-in-out;
+  background-color: #752F97;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.pase-footer p:hover {
+  transform: scale(1.05);
+}
+.pase-footer p:hover {
+  background-color: rgb(86.8636363636, 34.8939393939, 112.1060606061);
+}
+
+.footer {
+  background-color: #F53756;
+  padding: 2rem;
+}
+.footer p {
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+.galeria-imagenes {
+  margin: 0 10rem;
+  display: grid;
+  grid-template-columns: repeat(1, 200fr);
+  gap: 1rem;
+}
+@media (min-width: 480px) {
+  .galeria-imagenes {
+    grid-template-columns: repeat(2, 200fr);
+  }
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    grid-template-columns: repeat(2, 200fr);
+  }
+}
+@media (min-width: 1200px) {
+  .galeria-imagenes {
+    grid-template-columns: repeat(3, 200fr);
+  }
+}
+@media (min-width: 1440px) {
+  .galeria-imagenes {
+    grid-template-columns: repeat(4, 200fr);
+  }
+}
+.galeria-imagenes img {
+  height: 30rem;
+  object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  animation: fadeIn ease-in 0.5s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal.fadeOut {
+  animation: fadeOut ease-in 0.5s;
+}
+.modal img {
+  max-width: 100rem;
+}
+
+.boton-cerrar {
+  width: 4rem;
+  height: 4rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=app.css.map */

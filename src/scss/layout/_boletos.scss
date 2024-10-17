@@ -1,0 +1,78 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+@use 'sass:color';
+
+.contenedor-boletos{
+    background-color: v.$verde;
+}
+
+
+.boletos {
+    @include m.contenedor;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    ul {
+        @include m.resetear-lista;
+        color: v.$negro;
+        font-size: 2.4rem;
+    }
+    li {
+        padding: 2rem;
+        border-bottom: 1px solid color.adjust(v.$negro, $lightness: 80%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul, li {
+        background-color: v.$blanco;
+    }
+}
+
+.pase {
+    transition: transform .3s ease-in-out; 
+    &:hover {
+        transform: scale(1.05);
+    }
+}       
+
+.pase-nombre {
+    color: v.$blanco;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.pase-header {
+    background-color: v.$rosa;
+    text-align: center;
+    padding: 0.1rem;
+    p {
+        font-size: 3rem;
+        color: v.$blanco;
+    }
+}
+
+.pase-footer {
+    background-color: v.$blanco;
+    text-align: center;
+    padding: 2rem;
+    p {
+        transition: transform .3s ease-in-out; 
+        &:hover {
+            transform: scale(1.05);
+        }
+        background-color: v.$morado;
+        padding: 2rem;
+        border-radius: 1rem;
+        font-size: 3rem;
+        font-weight: 900;
+        color: v.$blanco;
+        cursor:pointer;
+        &:hover {
+            background-color: rgba(color.adjust(v.$morado, $lightness: -10%), 9.9);
+
+    }
+}}
